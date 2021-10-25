@@ -1,0 +1,88 @@
+/*Name: Janvi Sutariya
+Student Id: 301171524*/
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+.wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.backcolor{
+  background-color: #8ccaf3;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar {
+  background-color: #15085e;
+  font-family: 'Lobster', cursive;
+  color: #fff;
+  letter-spacing: 4px;
+}
+.font{
+  color: #15085e;
+}
+.text{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.footer-area {
+  background-color: #15085e;
+  font-family: 'Lobster', cursive;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: rgba(255,255,255,.5);
+  font-size: 15pt;
+}
+a {
+  color: #1d3e4b;
+}
+
+
+.input-group-addon .fa
+{
+    font-size: 18px;
+}
+
+.input-group .form-control
+{
+    position:relative;
+    z-index: 2;
+    float:left;
+    margin-bottom: 0;
+}
+
+.input-group .form-control:last-child
+{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.img-fluid {
+  height: 250;
+}
+i 
+{
+    padding-top: 10px;
+}

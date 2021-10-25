@@ -1,0 +1,49 @@
+<div class="row justify-content-lg-center g-3">
+    <h2 class="text-center"><%= title %> Developer Contacts</h2>
+    <br>
+    <br>
+    <br>
+    <form method="POST" class="col-lg-6 col-md-10 col-sm-10">
+        <br>
+        <br>
+        <br>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="firstname">First Name</span>
+            <input id="name" type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="Item First Name" 
+            name="firstname" value=<%= contacts.firstname %> required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="lastname">Last Name</span>
+            <input id="lastname" type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="Item Last Name" 
+            name="lastname" value=<%= contacts.lastname %> required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="field">Field</span>
+            <input id="field" type="text" class="form-control" placeholder="field" aria-label="field" aria-describedby="Item Field" 
+            name="field" value=<%= contacts.field %> required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="ethnicity">Ethnicity</span>
+            <input id="ethnicity" type="text" class="form-control" placeholder="ethnicity" aria-label="ethnicity" aria-describedby="Item ethnicity" 
+            name="ethnicity" value=<%= contacts.ethnicity %> required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="century">Century</span>
+            <input id="century" type="number" class="form-control" placeholder="century" aria-label="century" aria-describedby="Item century" 
+            name="century" value=<%= contacts.century %> required>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-edit fa-lg"></i> Edit
+        </button>
+        <a href="/contacts" class="btn btn-warning">
+            <i class="fas fa-undo"></i> Cancel</a>
+            <br>
+            <br>
+            <br>
+            <br>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<br>

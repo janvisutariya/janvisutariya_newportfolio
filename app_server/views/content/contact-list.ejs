@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col">
+    <br>
+    <br>
+    <header><h1 class="text-center">Developer Contacts</h1></header>
+    <% if(displayName) { %>
+        <a href="/contacts/add" id="addButton" class="btn btn-primary mb-1  text-center"><i class="fas fa-plus-circle"></i> Add Contact</a>
+    <% } %>
+    <table class="table table-secondary table-striped table-bordered table-hover">
+        <thead class="table">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Field</th>
+                <th scope="col">Ethnicity</th>
+                <th scope="col">Century</th>
+                <% if(displayName) { %>
+                <th>Edit</th>
+                <th>Delete</th>
+                <% } %>
+            </tr>
+        </thead>
+        <tbody>
+
+            <!-- Sorting Contacts by First Name using EJS-->
+            <% for(let x = 0; x < contacts.length; x++) { %>
+            <%      for (let j = 0; j < contacts.length -1; j++) { %>
+            <%          if (contacts[j].firstname > contacts[j + 1].firstname) { %>
+            <%              let temp = contacts[j]; %>
+            <%              contacts[j] = contacts[j + 1]; %>
+            <%              contacts[j + 1] = temp; %>
+            <%  }}} %>
+
+            <% for(let count = 0; count < contacts.length; count++) { %>
+            
+            <tr>
+                <th scope="row"><%= count + 1 %></th>
+                <td><%= contacts[count].firstname %></td>
+                <td><%= contacts[count].lastname %></td>
+                <td><%= contacts[count].field %></td>
+                <td><%= contacts[count].ethnicity %></td>
+                <td><%= contacts[count].century %></td>
+                <% if(displayName) { %>
+                    <td class="text-center"><a href="/contacts/edit/<%= contacts[count]._id %>" class="btn btn-primary btn-sm edit"><i class="fas fa-edit fa-sm"></i> Edit </a></td>
+                    <td class="text-center"><a href="/contacts/delete/<%= contacts[count]._id %>" class="btn btn-danger btn-sm delete"><i class="fas fa-trash-alt fa-sm"></i> Delete</a></td>
+                <% } %>
+            </tr>
+            <% } %>
+
+        </tbody>
+    </table>
+</div>
+<br>
+<br>
+<br>
+<br>
